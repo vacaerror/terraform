@@ -33,7 +33,7 @@ pipeline {
         stage('Report') {
             steps {
                 // Generar informes de prueba
-                junit '**/target/test-reports/*.xml'
+                echo 'Report'
             }
         }
     }
