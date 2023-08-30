@@ -12,7 +12,11 @@ pipeline {
         stage('Build') {
             steps {
                 // Compilar tu aplicación (por ejemplo, usando Maven o Gradle)
-                  echo 'Building'
+                script {
+                    currentBuild.displayName = "# Checkout"
+                    currentBuild.description = "Checkout step"
+                } 
+                echo 'Building'
             }
         }
         
